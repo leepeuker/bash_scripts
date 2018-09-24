@@ -2,7 +2,6 @@
 
 # This script can be used to easily create a new web project:
 # - creates project directory (with the submitted document root directory)
-# - creates index.php (displaying information about the selected php version)
 # - creates and enables V-Host (with selected PHP version)
 # - adds local url entry to /etc/hosts
 #
@@ -73,7 +72,6 @@ done
 
 # Create document root
 mkdir -p $project_document_root
-printf "<?php phpinfo();" > "$project_document_root/index.php"
 chown -R $SUDO_USER:$SUDO_USER $project_root
 chmod -R 755 $project_root
 
